@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carpa Médica de Emergencia - Pereira</title>
+    <style>
+        :root {
+            --primary: #dc2626;
+            --primary-dark: #b91c1c;
+            --secondary: #0f172a;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #1e293b;
+            --text-light: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--secondary);
+            color: white;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            border-bottom: 5px solid var(--primary);
+        }
+
+        .badge {
+            background-color: var(--primary);
+            color: white;
+            font-size: 0.85rem;
+            font-weight: bold;
+            padding: 0.35rem 0.8rem;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            max-width: 700px;
+            margin: 0 auto 1.5rem auto;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.8rem;
+            border-radius: 6px;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1rem;
+            transition: background 0.2s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: #334155;
+            color: white;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 640px) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 0.5rem;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f1f5f9;
+            display: flex;
+            align-items: center;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        .bank-details {
+            background-color: #f1f5f9;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 0.8rem;
+            font-size: 0.95rem;
+        }
+
+        .bank-details p {
+            margin-bottom: 0.3rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        footer {
+            background-color: var(--secondary);
+            color: var(--text-light);
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            border-top: 1px solid #334155;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <span class="badge">EMERGENCIA PEREIRA</span>
+        <h1>Carpa Médica de Voluntariado</h1>
+        <p class="subtitle">Atención médica primaria y primeros auxilios para las familias afectadas por el terremoto en Pereira.</p>
+        <div class="cta-group">
+            <a href="#donar" class="btn btn-primary">Quiero Donar</a>
+            <a href="#voluntario" class="btn btn-secondary">Registrarme como Voluntario</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+            <!-- Necesidades de Insumos -->
+            <div class="card">
+                <h2 class="card-title">🩹 Insumos Urgentes</h2>
+                <ul>
+                    <li>✅ Antihipertensivos y antiinflamatorios</li>
+                </ul>
+            </div>
+
+            <!-- Datos de Cuentas y Donaciones -->
+            <div class="card" id="donar">
+                <h2 class="card-title">💳 Cuentas para Donaciones</h2>
+                <p style="font-size: 0.9rem; color: #475569;">Tus aportes nos permiten comprar insumos de urgencia en farmacias locales.</p>
+                
+                <div class="bank-details">
+                    <p><strong>Bancolombia (Ahorros):</strong> 000-000000-00</p>
+                    <p><strong>Nequi / Daviplata:</strong> 300 000 0000</p>
+                    <p><strong>Titular:</strong> Carpa Médica Voluntaria</p>
+                    <p><strong>NIT / C.C.:</strong> 000.000.000</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ubicación Físico -->
+        <div class="card" style="margin-bottom: 2rem;">
+            <h2 class="card-title">📍 Punto de Acopio y Atencion Medica</h2>
+            <p><strong>Dirección:</strong> [ESCRIBE AQUÍ LA DIRECCIÓN EXACTA EN PEREIRA]</p>
+            <p><strong>Punto de Referencia:</strong> [EJ: Frente al Parque Olaya / Cancha del barrio]</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #475569;">Horario de atención: 24 Horas / Continuo</p>
+        </div>
+
+        <!-- Formulario Voluntarios -->
+        <div class="card" id="voluntario">
+            <h2 class="card-title">🩺 Registro de Personal Médico</h2>
+            <p style="margin-bottom: 1rem; font-size: 0.9rem;">Buscamos médicos, enfermeros/as, paramédicos y personal logístico.</p>
+            
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                </div>
+                <div class="form-group">
+                    <label for="perfil">Especialidad / Perfil</label>
+                    <select id="perfil" name="perfil" required>
+                        <option value="">Selecciona tu perfil</option>
+                        <option value="medico">Médico General / Especialista</option>
+                        <option value="enfermero">Enfermero(a) / Auxiliar</option>
+                        <option value="paramedico">Paramédico / APH</option>
+                        <option value="logistica">Apoyo Logístico / Triaje</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono (WhatsApp)</label>
+                    <input type="tel" id="telefono" name="telefono" required placeholder="3001234567">
+                </div>
+                <div class="form-group">
+                    <label for="disponibilidad">Disponibilidad de Tiempo</label>
+                    <input type="text" id="disponibilidad" name="disponibilidad" placeholder="Ej: Mañanas, Noches, Fines de semana">
+                </div>
+                <button type="button" class="btn btn-primary" style="width: 100%; border: none; cursor: pointer;">Enviar Registro</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>Voluntariado Médico de Emergencia — Pereira, Risaralda | Uniendo fuerzas por la salud de nuestra comunidad.</p>
+    </footer>
+
+</body>
+</html>
